@@ -22,7 +22,7 @@ for (i = 0; i < btns.length; i++) {
   });
 }
 
-let navlist = document.querySelector(".nav-list");
+let navlist = document.querySelector(".nav-list") ||  document.querySelector(".navli");
 let openicon = document.querySelector(".bx-menu");
 let closeicon = document.querySelector(".close-icon");
 

@@ -258,10 +258,6 @@ h2 {
   justify-content: center;
   gap: 40px 11vw;
 }
-.speakercard h2,
-h3 {
-  margin-top: -0.1px;
-}
 .speakercard {
   display: flex;
   flex-direction: column;
@@ -269,10 +265,12 @@ h3 {
 }
 .speakercard h3 {
   color: #ffaba5;
-  /* padding-left: 20px; */
-
   justify-content: center !important;
   align-items: center !important;
+  margin: 10px 0;
+}
+.speakercard h2 {
+  margin-top: 10px;
 }
 
 .socialmedia img {
