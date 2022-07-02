@@ -7,7 +7,8 @@
   /* box-sizing: border-box; */
 }
 
-html, body{
+html,
+body {
   overflow-x: hidden;
 }
 li {
@@ -327,7 +328,7 @@ button {
 
 footer {
   margin-top: 50px;
-  padding-top: 10px;
+  padding: 30px 0 15px;
   width: 100% !important;
   background-color: #0f0f0f;
 }
@@ -362,7 +363,9 @@ footer {
 .pt-2 {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
+  gap: 10px;
 }
 .p2 {
   display: flex;
@@ -380,23 +383,8 @@ footer {
 .f-text {
   font-size: 16px;
   margin-top: 15px;
-  padding-bottom: 5px;
 }
 
-@media (max-width: 665px) {
-  .p1 img {
-    width: 39vw;
-  }
-}
-@media (max-width: 653px) {
-  .p2 {
-    margin-top: -6%;
-  }
-}
-
-@media (min-width:665px) and (max-width:768px)
-{
-  .p1 img{
-    width: 22vw;
-  }
+.p1 img {
+  width: 222px;
 }
