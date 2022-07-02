@@ -447,7 +447,7 @@ footer {
   margin-right: 7px;
 }
 .csvg {
-  padding: 0 7px;
+  margin: 0 7px;
   fill: whitesmoke !important;
 }
 .csvg:hover {
