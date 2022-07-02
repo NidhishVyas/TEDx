@@ -252,7 +252,6 @@ h2 {
 }
 .speakerinfo {
   display: flex;
-  width: 100vw;
   padding-top: 5%;
   flex-wrap: wrap;
   justify-content: center;
@@ -364,7 +363,6 @@ h2 {
   transition: 0.3s;
 }
 footer {
-  padding: 30px 30px 15px;
   width: 100% !important;
   background-color: #0f0f0f;
 }
@@ -375,6 +373,10 @@ footer {
 }
 .connect {
   margin-right: 7px;
+}
+.connect svg {
+  margin-right: 7px;
+  box-sizing: content-box !important;
 }
 .csvg {
   padding: 0 7px;
@@ -417,6 +419,7 @@ footer {
 .f-text {
   font-size: 16px;
   margin-top: 15px;
+  padding-bottom: 5px;
 }
 
 @media (max-width: 665px) {

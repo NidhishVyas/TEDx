@@ -395,7 +395,6 @@ button {
   transition: 0.3s;
 }
 footer {
-  padding: 30px 30px 15px;
   width: 100% !important;
   background-color: #0f0f0f;
 }
@@ -448,6 +447,7 @@ footer {
 .f-text {
   font-size: 16px;
   margin-top: 15px;
+  padding-bottom: 5px;
 }
 
 @media (max-width: 665px) {
