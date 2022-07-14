@@ -1,8 +1,11 @@
-
+*{
+  box-sizing: content-box !important;
+}
 
 html,
 body {
   overflow-x: hidden;
+ 
 }
 hr {
   opacity: 1 !important;
@@ -90,8 +93,12 @@ hr {
   transition: 0.3s;
   transform: scale(1.1);
 }
-
-
+.container{
+  box-sizing: border-box !important;
+}
+.card{
+  border: 1px solid rgba(0, 0, 0, 0.456);
+}
 .card-body {
   padding: 0px 0px !important;
 }
@@ -162,11 +169,11 @@ button {
 
 .main-nav {
   display: flex;
-  width: 100vw !important;
+  width: 101% !important;
   background-color: white;
   justify-content: space-between;
   /* align-items: center; */
-  box-sizing: content-box !important;
+  box-sizing: border-box !important;
   padding: 10px 15px;
 }
 
@@ -226,7 +233,6 @@ button {
   color: #000;
   font-size: 40px;
   cursor: pointer;
-  margin-right: 20px;
 }
 
 /*--------------------- RESPONSIVE ------------------------*/
@@ -234,6 +240,7 @@ button {
 @media (min-width: 768px) {
   .nav-items-right {
     display: none;
+  
   }
 
   .mobile {
@@ -390,12 +397,15 @@ h5 {
   text-align: center;
   z-index: 101;
   font-size: 3vw;
+  font-weight: bold;
 }
-
-@media (max-width: 492px) {
+@media (max-width: 700px) {
   .regh {
     font-size: 6vw;
   }
+}
+@media (max-width: 492px) {
+
   .regimg1 {
     width: 90vw;
     left: 5%;
@@ -412,6 +422,8 @@ h5 {
   position: relative;
   margin-top: -370px;
   left: 45%;
+
+
 }
 .regbut button {
   width: 100%;
@@ -420,10 +432,14 @@ h5 {
   border: none;
   padding-top: 6%;
   padding-bottom: 6%;
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.2;
+  box-sizing: content-box !important;
 }
 @media (max-width: 492px) {
   .regbut {
-    width: 20vw;
+    width: 20vw !important;
     padding: 2%;
   }
 }
@@ -449,6 +465,7 @@ footer {
 .csvg {
   margin: 0 7px;
   fill: whitesmoke !important;
+  box-sizing: content-box;
 }
 .csvg:hover {
   cursor: pointer;
@@ -484,11 +501,15 @@ footer {
   height: 2px;
   background-color: #ffaba5;
   border: none;
+  margin: 0;
 }
+
 
 .f-text {
   font-size: 16px;
   margin-top: 15px;
+  font-weight: bold;
+  margin-bottom: 0rem;
 }
 
 .p1 img {
