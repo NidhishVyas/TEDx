@@ -1,4 +1,11 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"); */
+:root {
+  --test: #e62b1e;
+  --font: #3f3f3f;
+  --background: #fff;
+  --footer: #0f0f0f;
+  --nav-logo: url(../assets/TEDxSIESGST_without_bg_black-1.png);
+}
 
 * {
   margin: 0;
@@ -10,6 +17,7 @@
 html,
 body {
   overflow-x: hidden;
+  background-color: var(--background);
 }
 li {
   list-style: none;
@@ -39,8 +47,11 @@ button {
 }
 
 .logo {
+  background-image: var(--nav-logo);
   width: 222px;
+  height: 42px;
   cursor: pointer;
+  background-size: contain;
 }
 
 .main-nav {
@@ -61,7 +72,7 @@ button {
   align-items: center;
   justify-content: space-around;
   z-index: 10;
-  background-color: #fff;
+  background-color: var(--background);
   transition: top 1s ease;
 }
 
@@ -88,7 +99,7 @@ button {
 .nav-btn {
   display: none;
   padding: 10px 24px;
-  background: #e62b1e;
+  background: var(--test);
   color: #fff;
   font-weight: 500;
   font-size: 18px;
@@ -136,6 +147,7 @@ button {
   font-family: "Montserrat", sans-serif;
   font-size: 32px;
   text-align: center;
+  color: var(--font);
 }
 
 .header span {
@@ -169,6 +181,7 @@ button {
   font-weight: 500;
   display: flex;
   align-items: center;
+  color: var(--font);
 }
 
 .btn-watch i {
@@ -189,6 +202,7 @@ button {
 .theme-name {
   font-size: 20px;
   font-weight: 500;
+  color: var(--font);
 }
 
 .theme-section img {
@@ -201,6 +215,7 @@ button {
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
+  color: var(--font);
 }
 
 /*--------------------- RESPONSIVE ------------------------*/
@@ -234,7 +249,7 @@ button {
     font-size: 16px;
     line-height: 20px;
     margin: 0 10px;
-    color: #000;
+    color: var(--font);
     transition: 0.33s ease;
   }
 
@@ -330,7 +345,7 @@ footer {
   margin-top: 50px;
   padding: 30px 0 15px;
   width: 100% !important;
-  background-color: #0f0f0f;
+  background-color: var(--footer);
 }
 .about,
 .connect {
@@ -387,4 +402,38 @@ footer {
 
 .p1 img {
   width: 222px;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.label {
+  background-color: #e62b1e;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  position: relative;
+  height: 24px;
+  width: 50px;
+}
+
+.ball {
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  height: 22px;
+  width: 22px;
+  transform: translateX(0px);
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+  transform: translateX(28px);
 }
