@@ -56,6 +56,7 @@ getComputedStyle(document.documentElement).getPropertyValue("--nav");
 getComputedStyle(document.documentElement).getPropertyValue("--footer");
 getComputedStyle(document.documentElement).getPropertyValue("--footer-img");
 getComputedStyle(document.documentElement).getPropertyValue("--nav-logo");
+getComputedStyle(document.documentElement).getPropertyValue("--border");
 console.log("here", theme);
 if (theme === "dark") {
   document.getElementById("chk").checked = true;
@@ -63,6 +64,7 @@ if (theme === "dark") {
   document.documentElement.style.setProperty("--background", "#000");
   document.documentElement.style.setProperty("--nav", "#000");
   document.documentElement.style.setProperty("--footer", "#6C6C6C");
+  document.documentElement.style.setProperty("--border", "rgba(69, 69, 69, 0.6)");
   document.documentElement.style.setProperty(
     "--footer-img",
     "url(../assets/vector-3-dark.png)"
@@ -82,6 +84,7 @@ chk.addEventListener("change", () => {
     document.documentElement.style.setProperty("--background", "#000");
     document.documentElement.style.setProperty("--nav", "#000");
     document.documentElement.style.setProperty("--footer", "#6C6C6C");
+    document.documentElement.style.setProperty("--border", "rgba(69, 69, 69, 0.6)");
     document.documentElement.style.setProperty(
       "--footer-img",
       "url(../assets/vector-3-dark.png)"
@@ -96,6 +99,7 @@ chk.addEventListener("change", () => {
     document.documentElement.style.setProperty("--background", "#fff");
     document.documentElement.style.setProperty("--nav", "#fff");
     document.documentElement.style.setProperty("--footer", "#0f0f0f");
+    document.documentElement.style.setProperty("--border", "rgba(0, 0, 0, 0.4)");
     document.documentElement.style.setProperty(
       "--footer-img",
       "url(../assets/vector-3-light.png)"
