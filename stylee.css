@@ -51,6 +51,7 @@ button {
   width: 222px;
   height: 42px;
   cursor: pointer;
+  background-repeat: no-repeat;
   background-size: contain;
 }
 
@@ -248,7 +249,7 @@ button {
     font-weight: 500;
     font-size: 16px;
     line-height: 20px;
-    margin: 0 10px;
+    margin: 0 5px;
     color: var(--font);
     transition: 0.33s ease;
   }
@@ -436,4 +437,14 @@ footer {
 
 .checkbox:checked + .label .ball {
   transform: translateX(28px);
+}
+
+@media (max-width:375px)
+{
+  .logo{
+    width: 204px;
+  }
+  .main-nav{
+    padding: 10px 6px;
+  }
 }
