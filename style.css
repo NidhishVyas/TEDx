@@ -52,11 +52,11 @@ button {
   height: 42px;
   cursor: pointer;
   background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .main-nav {
   display: flex;
-  width: 100% !important;
   background-color: var(--nav);
   justify-content: space-between;
   align-items: center;
@@ -105,7 +105,6 @@ button {
   color: #fff;
   font-weight: 500;
   font-size: 18px;
-  margin-right: 20px;
   align-items: center;
 }
 
@@ -119,7 +118,6 @@ button {
   color: #000;
   font-size: 40px;
   cursor: pointer;
-  margin-right: 20px;
 }
 
 .main-section {
@@ -513,4 +511,14 @@ footer {
 
 .checkbox:checked + .label .ball {
   transform: translateX(28px);
+}
+
+@media (max-width:375px)
+{
+  .logo{
+    width: 204px;
+  }
+  .main-nav{
+    padding: 10px 6px;
+  }
 }
