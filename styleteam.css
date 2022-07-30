@@ -1,74 +1,67 @@
-*{
+:root {
+  --test: #e62b1e;
+  --font: #3f3f3f;
+  --teambackground: #fff;
+  --nav: #fff;
+  --footer: #0f0f0f;
+  --footer-img: url(../assets/vector-3-light.png);
+  --nav-logo: url(../assets/TEDxSIESGST_without_bg_black-1.png);
+  --border: rgba(0, 0, 0, 0.4);
+}
+* {
   box-sizing: content-box !important;
 }
-
+.col-lg-1{
+  flex-shrink: 1 !important;
+}
 html,
 body {
   overflow-x: hidden;
- 
+  color: var(--font);
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--background);
 }
 hr {
   opacity: 1 !important;
 }
 
 .team {
-  background-color: whitesmoke;
+  background-color: var(--teambackground);
   width: 60vw;
+  color: var(--font);
   max-width: 910px !important;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 15px;
 }
+.row>* {
+  flex-shrink: -1 !important;
+}
 .title {
   font-size: 2rem;
-  color: black;
+  color: var(--font);
   position: relative;
   text-align: center;
 }
-.lines {
+.ruler {
   width: 300px;
-  height: 45px;
+  height: 3px !important;
   position: relative;
-}
-.lines::after,
-.lines::before {
-  content: "";
-  position: absolute;
-  margin: auto !important;
-  height: 4px;
-  background: #e62b1e;
-  width: 45%;
-}
-.lines::after {
-  left: 0;
-  top: 15px;
-}
-.lines::before {
-  right: 0;
-  top: 15px;
+  color: #e62b1e;
+
 }
 
-.images {
-  height: 25px;
-}
 
 .bt {
   border-radius: 11px !important;
   margin-top: 5px;
   width: 220px !important;
-  background-color: whitesmoke;
-  color: rgb(56, 56, 56);
+  background-color: var(--teambackground);
+  color: var(--color);
   border: none;
   margin-bottom: 5px;
 }
 .bt:hover {
-  background-image: linear-gradient(
-    to right,
-    #000000,
-    #3c131c,
-    #741628,
-    #ae1a2a,
-    #e62b1e
-  );
+  background-color: #e62b1e;
   color: whitesmoke !important;
   transition: 0.3s;
 }
@@ -93,18 +86,20 @@ hr {
   transition: 0.3s;
   transform: scale(1.1);
 }
-.container{
+.container {
   box-sizing: border-box !important;
 }
-.card{
-  border: 1px solid rgba(0, 0, 0, 0.456);
+.card {
+  background-color: var(--background);
+  border: 1px solid var(--border);
 }
 .card-body {
   padding: 0px 0px !important;
 }
 .csvg1 {
-  fill: rgba(0, 0, 0, 0.63);
-  margin-top: -20px !important;
+  fill: var(--font);
+  opacity: 0.63;
+  margin: -20px 5px 0 !important;
 }
 .csvg1:hover {
   cursor: pointer;
@@ -163,32 +158,34 @@ button {
 }
 
 .logo {
+  background-image: var(--nav-logo);
   width: 222px;
+  height: 42px;
   cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .main-nav {
   display: flex;
-  width: 101% !important;
-  background-color: white;
+  background-color: var(--nav);
   justify-content: space-between;
-  /* align-items: center; */
-  box-sizing: border-box !important;
+  align-items: center;
   padding: 10px 15px;
 }
 
 .navli {
   height: 60vh;
-  padding: 24px 0 0 0;
+  padding-top: 24px;
   position: absolute;
   left: 0%;
-  width: 100%;
+  width: 90%;
   display: none;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   z-index: 10;
-  background-color: #fff;
+  background-color: var(--background);
   transition: top 1s ease;
 }
 
@@ -240,7 +237,6 @@ button {
 @media (min-width: 768px) {
   .nav-items-right {
     display: none;
-  
   }
 
   .mobile {
@@ -269,7 +265,7 @@ button {
     font-size: 16px;
     line-height: 20px;
     margin: 0 5px;
-    color: #000;
+    color: var(--font);
     transition: 0.33s ease;
   }
 
@@ -352,6 +348,7 @@ button {
   }
 }
 
+
 /*-----------------------------footer----------------------------*/
 h5 {
   margin-bottom: 0rem !important;
@@ -374,6 +371,7 @@ h5 {
   } */
 
 .regimg {
+  background-image: var(--footer-img);
   height: 350px;
   width: 110%;
   z-index: 100;
@@ -405,7 +403,6 @@ h5 {
   }
 }
 @media (max-width: 492px) {
-
   .regimg1 {
     width: 90vw;
     left: 5%;
@@ -422,8 +419,6 @@ h5 {
   position: relative;
   margin-top: -370px;
   left: 45%;
-
-
 }
 .regbut button {
   width: 100%;
@@ -452,7 +447,7 @@ h5 {
 footer {
   padding: 30px 0 15px;
   width: 100% !important;
-  background-color: #0f0f0f;
+  background-color: var(--footer);
 }
 .about,
 .connect {
@@ -504,7 +499,6 @@ footer {
   margin: 0;
 }
 
-
 .f-text {
   font-size: 16px;
   margin-top: 15px;
@@ -552,4 +546,15 @@ footer {
 
 .checkbox:checked + .label .ball {
   transform: translateX(28px);
+}
+
+
+@media (max-width:375px)
+{
+  .logo{
+    width: 204px;
+  }
+  .main-nav{
+    padding: 10px 6px;
+  }
 }
